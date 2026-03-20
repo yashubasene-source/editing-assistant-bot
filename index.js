@@ -117,8 +117,7 @@ Be practical and specific for a documentary editor.`;
 
     try {
       const result = await askAI(prompt);
-      bot.sendMessage(chatId, `🎥 *B-Roll Suggestions:*\n\n${result}`, {
-        parse_mode: "Markdown",
+      bot.sendMessage(chatId, `🎥 B-Roll Suggestions:\n\n${result}`, {
         reply_markup: { inline_keyboard: [
           [{ text: "🔄 Naya Script", callback_data: "broll" }],
           [{ text: "🏠 Main Menu", callback_data: "menu" }],
